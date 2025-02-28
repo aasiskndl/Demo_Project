@@ -3,7 +3,7 @@ import { SiHomeassistant } from "react-icons/si";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
-
+// vnbcnbc
 const Header = () => {
   const navigate = useNavigate();
   const [isCompanyOpen, setIsCompanyOpen] = useState(false);
