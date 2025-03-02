@@ -1,9 +1,10 @@
-import { CiSearch } from "react-icons/ci";
+// import { CiSearch } from "react-icons/ci";
 import { SiHomeassistant } from "react-icons/si";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
-// vnbcnbc
+import { IoMdArrowDropdown } from "react-icons/io";
+
 const Header = () => {
   const navigate = useNavigate();
   const [isCompanyOpen, setIsCompanyOpen] = useState(false);
@@ -14,6 +15,7 @@ const Header = () => {
   const companyLinks = [
     { name: "About", path: "/about" },
     { name: "FAQ", path: "/faq" },
+
   ];
 
   const productLinks = [
@@ -23,6 +25,10 @@ const Header = () => {
     { name: "Online Billing", path: "/products/online-billing" },
   ];
 
+  const careerLinks = [
+    { name: "Career", path: "/career" },
+  ];
+
   const toggleMobileDropdown = (dropdown) => {
     setMobileDropdown(mobileDropdown === dropdown ? "" : dropdown);
   };
@@ -30,10 +36,10 @@ const Header = () => {
   return (
     <div className="bg-tint w-full py-4 flex items-center justify-between px-4 md:px-12 relative">
       {/* Home Icon */}
-      <SiHomeassistant className="text-4xl"/>
+      <SiHomeassistant className="text-4xl" />
 
       {/* Search Bar - Hidden on mobile */}
-      <div className="flex-grow mx-4 md:mx-12 hidden md:block">
+      {/* <div className="flex-grow mx-4 md:mx-12 hidden md:block">
         <div className="relative w-full max-w-[600px]">
           <input
             type="text"
@@ -44,24 +50,24 @@ const Header = () => {
             <CiSearch />
           </button>
         </div>
-      </div>
+      </div> */}
 
       {/* Desktop Navigation */}
       <div className="hidden md:flex space-x-8 text-white text-sm font-semibold tracking-wide items-center">
-      <button
-        onClick={() => navigate("/")}
-        className="hover:text-yellow-500 px-4 py-2"
-      >
-        Home
-      </button>
+        <button
+          onClick={() => navigate("/")}
+          className="hover:text-yellow-500 px-4 py-2"
+        >
+          Home
+        </button>
         {/* Company Dropdown */}
         <div
           className="relative"
           onMouseEnter={() => setIsCompanyOpen(true)}
           onMouseLeave={() => setIsCompanyOpen(false)}
         >
-          <button className="hover:text-yellow-500 px-4 py-2">
-            Company
+          <button className="hover:text-yellow-500 px-4 py-2 flex items-center gap-1">
+            Company <IoMdArrowDropdown className={`transition-transform ${isCompanyOpen ? "rotate-180" : ""}`} />
           </button>
           {isCompanyOpen && (
             <div className="absolute top-full left-0 bg-black py-2 rounded-lg min-w-[160px] shadow-lg">
@@ -84,8 +90,8 @@ const Header = () => {
           onMouseEnter={() => setIsProductOpen(true)}
           onMouseLeave={() => setIsProductOpen(false)}
         >
-          <button className="hover:text-yellow-500 px-4 py-2">
-            Products
+          <button className="hover:text-yellow-500 px-4 py-2 flex items-center gap-1">
+            Products <IoMdArrowDropdown className={`transition-transform ${isCompanyOpen ? "rotate-180" : ""}`} />
           </button>
           {isProductOpen && (
             <div className="absolute top-full left-0 bg-black py-2 rounded-lg min-w-[200px] shadow-lg">
@@ -183,12 +189,15 @@ const Header = () => {
           >
             Services
           </button>
-          <button
-            onClick={() => navigate("/career")}
-            className="block w-full text-left px-4 py-2 text-white hover:text-yellow-500"
-          >
-            Career
-          </button>
+          {careerLinks.map((link, index) => (
+            <button
+              key={index}
+              onClick={() => navigate(link.path)}
+              className="block w-full text-left px-4 py-2 text-white hover:text-yellow-500"
+            >
+              {link.name}
+            </button>
+          ))}
         </div>
       )}
     </div>

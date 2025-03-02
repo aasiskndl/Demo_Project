@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <div className="bg-secondary h-screen w-full flex flex-col justify-center items-center text-center px-6">
       <h1 className="text-6xl font-bold text-black mb-6 tracking-widest">
-        Welcome to <span className="text-yellow-500">Silicon Everest</span>
+        Welcome to <span className="text-yellow-500">Matrika Technology</span>
       </h1>
       <p className="text-black text-lg max-w-[700px] leading-relaxed">
         We provide top-notch software solutions & digital services to uplift your business with the latest technology.

@@ -7,8 +7,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        tint: 'rgb(3,72,72)', // Custom tint
-        secondary:'rgba(255, 234, 81, 0.8)'
+        tint: 'rgb(3,72,72)', // Custom color for header and footer
+
+        secondary: 'rgba(185, 200, 50, 0.3)',  // Custom color for background
+
       },
     },
   },

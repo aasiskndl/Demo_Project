@@ -17,7 +17,7 @@ const Footer = () => {
             </div>
             <div className="flex items-center gap-2">
               <FaEnvelope className="text-yellow-500 text-xl md:text-2xl" />
-              <span className='text-xs md:text-sm'>sillicon@gmail.com</span>
+              <span className='text-xs md:text-sm'>@gmail.com</span>
             </div>
             <div className="flex items-center gap-2">
               <FaMapMarkerAlt className="text-yellow-500 text-xl md:text-2xl" />
@@ -73,7 +73,7 @@ const Footer = () => {
       {/* Bottom Copyright */}
       <div className="container mx-auto mt-8 md:mt-12 border-t border-gray-700 pt-6 text-center">
         <p className="text-xs md:text-sm text-gray-400">
-          © {new Date().getFullYear()} Silicon. All rights reserved.
+          © {new Date().getFullYear()} Matrika Technology. All rights reserved.
         </p>
       </div>
     </div>
