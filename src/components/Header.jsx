@@ -1,12 +1,10 @@
-// import { CiSearch } from "react-icons/ci";
 import { SiHomeassistant } from "react-icons/si";
-import { useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { IoMdArrowDropdown } from "react-icons/io";
 
 const Header = () => {
-  const navigate = useNavigate();
   const [isCompanyOpen, setIsCompanyOpen] = useState(false);
   const [isProductOpen, setIsProductOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -15,11 +13,10 @@ const Header = () => {
   const companyLinks = [
     { name: "About", path: "/about" },
     { name: "FAQ", path: "/faq" },
-
   ];
 
   const productLinks = [
-    { name: "M-Tech Billing", path: "/products/m-tech-billing" },
+    { name: "M-Tech Billing", path: "/products/mtechbilling" },
     { name: "JJewellery", path: "/products/jjewellery" },
     { name: "Matec Restaurant", path: "/products/matec-restaurant" },
     { name: "Online Billing", path: "/products/online-billing" },
@@ -38,47 +35,31 @@ const Header = () => {
       {/* Home Icon */}
       <SiHomeassistant className="text-4xl" />
 
-      {/* Search Bar - Hidden on mobile */}
-      {/* <div className="flex-grow mx-4 md:mx-12 hidden md:block">
-        <div className="relative w-full max-w-[600px]">
-          <input
-            type="text"
-            placeholder="Search..."
-            className="w-full py-3 pl-5 pr-12 bg-black rounded-full text-white outline-none border border-gray-700 focus:border-yellow-500 transition-all duration-300 placeholder:text-gray-400"
-          />
-          <button className="absolute right-4 top-1/2 -translate-y-1/2 text-white">
-            <CiSearch />
-          </button>
-        </div>
-      </div> */}
-
       {/* Desktop Navigation */}
       <div className="hidden md:flex space-x-8 text-white text-sm font-semibold tracking-wide items-center">
-        <button
-          onClick={() => navigate("/")}
-          className="hover:text-yellow-500 px-4 py-2"
-        >
+        <NavLink to="/" className="hover:text-yellow-500 px-4 py-2">
           Home
-        </button>
+        </NavLink>
+
         {/* Company Dropdown */}
         <div
           className="relative"
           onMouseEnter={() => setIsCompanyOpen(true)}
           onMouseLeave={() => setIsCompanyOpen(false)}
         >
-          <button className="hover:text-yellow-500 px-4 py-2 flex items-center gap-1">
+          <div className="hover:text-yellow-500 px-4 py-2 flex items-center gap-1">
             Company <IoMdArrowDropdown className={`transition-transform ${isCompanyOpen ? "rotate-180" : ""}`} />
-          </button>
+          </div>
           {isCompanyOpen && (
             <div className="absolute top-full left-0 bg-black py-2 rounded-lg min-w-[160px] shadow-lg">
               {companyLinks.map((link) => (
-                <button
+                <NavLink
                   key={link.name}
-                  onClick={() => navigate(link.path)}
-                  className="w-full text-left px-4 py-2 hover:bg-gray-800 hover:text-yellow-500"
+                  to={link.path}
+                  className="w-full block px-4 py-2 hover:bg-gray-800 hover:text-yellow-500"
                 >
                   {link.name}
-                </button>
+                </NavLink>
               ))}
             </div>
           )}
@@ -90,37 +71,33 @@ const Header = () => {
           onMouseEnter={() => setIsProductOpen(true)}
           onMouseLeave={() => setIsProductOpen(false)}
         >
-          <button className="hover:text-yellow-500 px-4 py-2 flex items-center gap-1">
-            Products <IoMdArrowDropdown className={`transition-transform ${isCompanyOpen ? "rotate-180" : ""}`} />
-          </button>
+          <div className="hover:text-yellow-500 px-4 py-2 flex items-center gap-1">
+            Products <IoMdArrowDropdown className={`transition-transform ${isProductOpen ? "rotate-180" : ""}`} />
+          </div>
           {isProductOpen && (
             <div className="absolute top-full left-0 bg-black py-2 rounded-lg min-w-[200px] shadow-lg">
               {productLinks.map((link) => (
-                <button
+                <NavLink
                   key={link.name}
-                  onClick={() => navigate(link.path)}
-                  className="w-full text-left px-4 py-2 hover:bg-gray-800 hover:text-yellow-500"
+                  to={link.path}
+                  className="w-full block px-4 py-2 hover:bg-gray-800 hover:text-yellow-500"
                 >
                   {link.name}
-                </button>
+                </NavLink>
               ))}
             </div>
           )}
         </div>
 
         {/* Simple Links */}
-        <button
-          onClick={() => navigate("/services")}
-          className="hover:text-yellow-500 px-4 py-2"
-        >
+        <NavLink to="/services" className="hover:text-yellow-500 px-4 py-2">
           Services
-        </button>
-        <button
-          onClick={() => navigate("/career")}
-          className="hover:text-yellow-500 px-4 py-2"
-        >
-          Career
-        </button>
+        </NavLink>
+        {careerLinks.map((link) => (
+          <NavLink key={link.name} to={link.path} className="hover:text-yellow-500 px-4 py-2">
+            {link.name}
+          </NavLink>
+        ))}
       </div>
 
       {/* Mobile Menu Button */}
@@ -134,7 +111,6 @@ const Header = () => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="absolute top-full left-0 right-0 bg-tint md:hidden p-4 space-y-4 shadow-lg">
-          {/* Company Dropdown */}
           <div className="text-white">
             <button
               className="w-full text-left px-4 py-2 flex justify-between items-center"
@@ -146,19 +122,18 @@ const Header = () => {
             {mobileDropdown === "company" && (
               <div className="pl-6">
                 {companyLinks.map((link) => (
-                  <button
+                  <NavLink
                     key={link.name}
-                    onClick={() => navigate(link.path)}
-                    className="block w-full text-left px-4 py-2 hover:text-yellow-500"
+                    to={link.path}
+                    className="block w-full px-4 py-2 hover:text-yellow-500"
                   >
                     {link.name}
-                  </button>
+                  </NavLink>
                 ))}
               </div>
             )}
           </div>
 
-          {/* Products Dropdown */}
           <div className="text-white">
             <button
               className="w-full text-left px-4 py-2 flex justify-between items-center"
@@ -170,33 +145,29 @@ const Header = () => {
             {mobileDropdown === "products" && (
               <div className="pl-6">
                 {productLinks.map((link) => (
-                  <button
+                  <NavLink
                     key={link.name}
-                    onClick={() => navigate(link.path)}
-                    className="block w-full text-left px-4 py-2 hover:text-yellow-500"
+                    to={link.path}
+                    className="block w-full px-4 py-2 hover:text-yellow-500"
                   >
                     {link.name}
-                  </button>
+                  </NavLink>
                 ))}
               </div>
             )}
           </div>
 
-          {/* Simple Links */}
-          <button
-            onClick={() => navigate("/services")}
-            className="block w-full text-left px-4 py-2 text-white hover:text-yellow-500"
-          >
+          <NavLink to="/services" className="block w-full px-4 py-2 text-white hover:text-yellow-500">
             Services
-          </button>
-          {careerLinks.map((link, index) => (
-            <button
-              key={index}
-              onClick={() => navigate(link.path)}
-              className="block w-full text-left px-4 py-2 text-white hover:text-yellow-500"
+          </NavLink>
+          {careerLinks.map((link) => (
+            <NavLink
+              key={link.name}
+              to={link.path}
+              className="block w-full px-4 py-2 text-white hover:text-yellow-500"
             >
               {link.name}
-            </button>
+            </NavLink>
           ))}
         </div>
       )}

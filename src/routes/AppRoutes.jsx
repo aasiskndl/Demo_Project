@@ -5,6 +5,7 @@ import AboutUs from "../components/AboutUs";
 import Products from "../components/Products";
 import FAQ from "../components/FAQ";
 import Career from "../components/Career";
+import MtechBilling from "../components/projects/MtechBilling";
 
 const AppRoutes = () => {
   return (
@@ -14,6 +15,7 @@ const AppRoutes = () => {
       <Route path="/products" element={<Products />} />
       <Route path="/faq" element={<FAQ />} />
       <Route path="/career" element={<Career />} />
+      <Route path="/products/mtechbilling" element={<MtechBilling />} />
     </Routes>
   );
 };
