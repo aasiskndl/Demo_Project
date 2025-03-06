@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 import ContactCard from './ContactCard';
 import FormCard from './FormCard';
 
-const MtechBilling = () => {
+const JJewellery = () => {
   const formik = useFormik({
     initialValues: {
       name: '',
@@ -37,13 +37,13 @@ const MtechBilling = () => {
       <div className="text-center max-w-4xl mb-6 md:mb-8">
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-3">
           <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
-            M-Tech Billing
+          JJewellery
           </span>
         </h1>
         <p className="text-gray-600 text-sm md:text-base leading-relaxed bg-yellow-50 p-4 rounded-lg shadow-sm">
-          M-Tech Billing is a powerful online billing software solution, fully certified by the Inland Revenue Department (IRD) of Nepal. 
-          Designed for businesses of all sizes, our platform streamlines your invoicing and billing processes while ensuring 
-          full compliance with government regulations.
+        JJewellery is a comprehensive software solution tailored for jewelry businesses, offering features like order management, billing, auto gold rate, stock control, karigar stock, 
+        jewellery tag printing, and loan management. This all-in-one tool simplifies your business operations, helping you manage customer orders, track inventory, and handle financial 
+        transactions with ease. JJewellery is designed to enhance efficiency and accuracy in your jewelry business, providing a seamless experience for both you and your customers.
         </p>
       </div>
 
@@ -56,4 +56,4 @@ const MtechBilling = () => {
   );
 };
 
-export default MtechBilling;
+export default JJewellery;

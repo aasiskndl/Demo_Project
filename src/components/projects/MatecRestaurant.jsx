@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 import ContactCard from './ContactCard';
 import FormCard from './FormCard';
 
-const MtechBilling = () => {
+const MatecRestaurant = () => {
   const formik = useFormik({
     initialValues: {
       name: '',
@@ -37,13 +37,15 @@ const MtechBilling = () => {
       <div className="text-center max-w-4xl mb-6 md:mb-8">
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-3">
           <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
-            M-Tech Billing
+          Matec Restaurant
           </span>
         </h1>
         <p className="text-gray-600 text-sm md:text-base leading-relaxed bg-yellow-50 p-4 rounded-lg shadow-sm">
-          M-Tech Billing is a powerful online billing software solution, fully certified by the Inland Revenue Department (IRD) of Nepal. 
-          Designed for businesses of all sizes, our platform streamlines your invoicing and billing processes while ensuring 
-          full compliance with government regulations.
+        Matec Restaurant is an integrated software solution specifically designed for the restaurant industry. It offers robust features for order management, billing, 
+        and stock control, enabling restaurant owners to streamline their operations. With Matec Restaurant, you can manage customer orders, track inventory, and generate 
+        accurate bills, all in one place. This software is essential for running a smooth and efficient restaurant business.
+
+
         </p>
       </div>
 
@@ -56,4 +58,4 @@ const MtechBilling = () => {
   );
 };
 
-export default MtechBilling;
+export default MatecRestaurant;
