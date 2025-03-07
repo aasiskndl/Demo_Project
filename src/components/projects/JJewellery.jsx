@@ -17,10 +17,9 @@ const JJewellery = () => {
       name: Yup.string()
         .matches(/^[^0-9]*$/, 'Enter Valid Name')
         .required('Name is required'),
-        phone: Yup.string()
+      phone: Yup.string()
         .matches(/^[0-9]{10}$/, 'Enter valid 10-digit phone number')
         .required('Phone Number is required'),
-
       email: Yup.string().email('Invalid email address').required('Email is required'),
       subject: Yup.string().required('Subject is required'),
       message: Yup.string().required('Message is required'),
@@ -37,13 +36,13 @@ const JJewellery = () => {
       <div className="text-center max-w-4xl mb-6 md:mb-8">
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-3">
           <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
-          JJewellery
+            JJewellery
           </span>
         </h1>
         <p className="text-gray-600 text-sm md:text-base leading-relaxed bg-yellow-50 p-4 rounded-lg shadow-sm">
-        JJewellery is a comprehensive software solution tailored for jewelry businesses, offering features like order management, billing, auto gold rate, stock control, karigar stock, 
-        jewellery tag printing, and loan management. This all-in-one tool simplifies your business operations, helping you manage customer orders, track inventory, and handle financial 
-        transactions with ease. JJewellery is designed to enhance efficiency and accuracy in your jewelry business, providing a seamless experience for both you and your customers.
+          JJewellery is a comprehensive software solution tailored for jewelry businesses, offering features like order management, billing, auto gold rate, stock control, karigar stock,
+          jewellery tag printing, and loan management. This all-in-one tool simplifies your business operations, helping you manage customer orders, track inventory, and handle financial
+          transactions with ease. JJewellery is designed to enhance efficiency and accuracy in your jewelry business, providing a seamless experience for both you and your customers.
         </p>
       </div>
 

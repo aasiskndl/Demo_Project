@@ -184,12 +184,11 @@ export default function Header() {
           <div className="mt-2 space-y-1 rounded-lg bg-tint p-4 ">
             <NavLink
               to="/"
-              className={({ isActive }) =>
-                cn(
-                  "block w-full px-4 py-2 text-sm font-medium transition-colors",
-                  isActive ? "text-yellow-500" : "text-white hover:text-yellow-500",
-                )
-              }
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={({ isActive }) => cn(
+                "block w-full px-4 py-2 text-sm font-medium transition-colors",
+                isActive ? "text-yellow-500" : "text-white hover:text-yellow-500"
+              )}
             >
               Home
             </NavLink>
@@ -200,7 +199,7 @@ export default function Header() {
                 className={cn(
                   "flex w-full items-center justify-between px-4 py-2 text-left text-sm font-medium",
                   isDropdownActive(companyLinks) ? "text-yellow-500" : "text-white",
-                  "hover:text-yellow-500",
+                  "hover:text-yellow-500"
                 )}
                 onClick={() => toggleMobileDropdown("company")}
               >
@@ -215,12 +214,11 @@ export default function Header() {
                     <NavLink
                       key={link.name}
                       to={link.path}
-                      className={({ isActive }) =>
-                        cn(
-                          "block w-full px-4 py-2 text-sm font-medium transition-colors",
-                          isActive ? "text-yellow-500" : "text-white hover:text-yellow-500",
-                        )
-                      }
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className={({ isActive }) => cn(
+                        "block w-full px-4 py-2 text-sm font-medium transition-colors",
+                        isActive ? "text-yellow-500" : "text-white hover:text-yellow-500"
+                      )}
                     >
                       {link.name}
                     </NavLink>
@@ -235,7 +233,7 @@ export default function Header() {
                 className={cn(
                   "flex w-full items-center justify-between px-4 py-2 text-left text-sm font-medium",
                   isDropdownActive(productLinks) ? "text-yellow-500" : "text-white",
-                  "hover:text-yellow-500",
+                  "hover:text-yellow-500"
                 )}
                 onClick={() => toggleMobileDropdown("products")}
               >
@@ -250,12 +248,11 @@ export default function Header() {
                     <NavLink
                       key={link.name}
                       to={link.path}
-                      className={({ isActive }) =>
-                        cn(
-                          "block w-full px-4 py-2 text-sm font-medium transition-colors",
-                          isActive ? "text-yellow-500" : "text-white hover:text-yellow-500",
-                        )
-                      }
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className={({ isActive }) => cn(
+                        "block w-full px-4 py-2 text-sm font-medium transition-colors",
+                        isActive ? "text-yellow-500" : "text-white hover:text-yellow-500"
+                      )}
                     >
                       {link.name}
                     </NavLink>
@@ -264,8 +261,10 @@ export default function Header() {
               )}
             </div>
 
+
             <NavLink
               to="/services"
+              onClick={() => setIsMobileMenuOpen(false)}  // Added click handler
               className={({ isActive }) =>
                 cn(
                   "block w-full px-4 py-2 text-sm font-medium transition-colors",
@@ -280,6 +279,7 @@ export default function Header() {
               <NavLink
                 key={link.name}
                 to={link.path}
+                onClick={() => setIsMobileMenuOpen(false)}  // Added click handler
                 className={({ isActive }) =>
                   cn(
                     "block w-full px-4 py-2 text-sm font-medium transition-colors",
