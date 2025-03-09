@@ -264,7 +264,7 @@ export default function Header() {
 
             <NavLink
               to="/services"
-              onClick={() => setIsMobileMenuOpen(false)}  // Added click handler
+              onClick={() => setIsMobileMenuOpen(false)}  
               className={({ isActive }) =>
                 cn(
                   "block w-full px-4 py-2 text-sm font-medium transition-colors",
@@ -279,7 +279,7 @@ export default function Header() {
               <NavLink
                 key={link.name}
                 to={link.path}
-                onClick={() => setIsMobileMenuOpen(false)}  // Added click handler
+                onClick={() => setIsMobileMenuOpen(false)}  
                 className={({ isActive }) =>
                   cn(
                     "block w-full px-4 py-2 text-sm font-medium transition-colors",

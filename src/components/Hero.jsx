@@ -1,5 +1,5 @@
 import React from 'react';
-
+import LocationMap from './projects/LocationMap';
 const Hero = () => {
   return (
     <div className="bg-secondary h-screen w-full flex flex-col justify-center items-center text-center px-6">
@@ -13,6 +13,7 @@ const Hero = () => {
         Explore Services
       </button>
     </div>
+    
   );
 };
 

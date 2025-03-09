@@ -3,7 +3,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import ContactCard from './ContactCard';
 import FormCard from './FormCard';
-
+import LocationMap from './LocationMap';
 const JJewellery = () => {
   const formik = useFormik({
     initialValues: {
@@ -51,6 +51,16 @@ const JJewellery = () => {
         <FormCard formik={formik} />
         <ContactCard />
       </div>
+      {/* Map Component*/}
+      <div id="location-section" className="w-full ">
+        <h2 className="text-xl font-semibold mb-4 text-gray-800 text-center">
+          Our Location
+        </h2>
+        <div className="w-full h-[450px] relative border-2 border-yellow-400 rounded-none overflow-hidden ">
+          <LocationMap />
+        </div>
+      </div>
+
     </div>
   );
 };
