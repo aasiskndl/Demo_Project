@@ -1,4 +1,3 @@
-// export default ContactCard;
 import { Mail, Phone, Globe, Building } from "lucide-react"
 
 export default function ContactCard() {
