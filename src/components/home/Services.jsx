@@ -61,7 +61,7 @@ const Services = () => {
             <p className="text-slate-600 mb-6">{service.description}</p>
             <motion.button
               className="bg-gray-700 text-white px-6 py-2 rounded hover:bg-yellow-500 duration-300"
-              whileHover={{ scale: 1.05 }} // Scale button on hover
+              whileHover={{ scale: 1.02 }} // Scale button on hover
               transition={{ duration: 0.2 }}
             >
               Read More

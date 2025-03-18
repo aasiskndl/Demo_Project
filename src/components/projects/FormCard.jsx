@@ -119,7 +119,7 @@ export default function FormCard({ formik }) {
                                 value={formik.values.message}
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
-                                className="w-full min-h-[159px] max-h-[300px] p-3 outline-none resize-y overflow-auto hover:border-gray-600 focus:border-gray-600 transition-all duration-300"
+                                className="w-full min-h-[159px] max-h-[300px] p-3 outline-none resize-y overflow-auto hover:border-gray-600 border-gray-600 transition-all duration-300"
                             />
 
                         </div>
@@ -130,7 +130,7 @@ export default function FormCard({ formik }) {
 
                     <button
                         type="submit"
-                        className="bg-[#1a1a1a] text-white py-3 px-8 font-medium uppercase hover:bg-gray-800 transition-colors"
+                        className="bg-gray-700 text-white py-3 px-8 font-medium uppercase hover:bg-yellow-500 transition-colors rounded transform hover:scale-[1.02]"
                     >
                         Submit
                     </button>

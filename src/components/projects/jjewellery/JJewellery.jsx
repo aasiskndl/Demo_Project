@@ -1,9 +1,9 @@
 import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import ContactCard from './ContactCard';
-import FormCard from './FormCard';
-import LocationMap from './LocationMap';
+import ContactCard from '../ContactCard';
+import FormCard from '../FormCard';
+import LocationMap from '../LocationMap';
 const JJewellery = () => {
   const formik = useFormik({
     initialValues: {

@@ -5,9 +5,9 @@ import AboutUs from "../components/AboutUs";
 import Products from "../components/Products";
 import FAQ from "../components/FAQ";
 import Career from "../components/Career";
-import MtechBilling from "../components/projects/MtechBilling";
-import JJewellery from "../components/projects/JJewellery";
-import MatecRestaurant from "../components/projects/MatecRestaurant";
+import MtechBilling from "../components/projects/mtech-billing/MtechBilling";
+import JJewellery from "../components/projects/jjewellery/JJewellery";
+import MatecRestaurant from "../components/projects/matec-restaurant/MatecRestaurant";
 
 const AppRoutes = () => {
   return (

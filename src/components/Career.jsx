@@ -47,7 +47,7 @@ const Career = () => {
               </div>
               <a 
                 href="#"
-                className="mt-4 inline-block w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-center rounded-lg text-sm font-semibold text-gray-900 shadow-sm transition-all duration-200 transform hover:scale-[1.02]"
+                className="mt-4 inline-block w-full sm:w-auto px-6 py-3  bg-gray-700 hover:bg-yellow-500 text-center rounded-lg text-sm font-semibold text-white shadow-sm transition-all duration-300 transform hover:scale-[1.02]"
               >
                 Apply Now
               </a>
