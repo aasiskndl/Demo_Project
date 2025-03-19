@@ -1,71 +1,68 @@
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
-import { useNavigate } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
+
+const contactInfo = [
+  { icon: <FaPhoneAlt />, text: "01-5925122" },
+  { icon: <FaEnvelope />, text: "info@matrikatec.com.np" },
+  { icon: <FaMapMarkerAlt />, text: "New Baneshwor, Kathmandu, Nepal" }
+];
+
+const products = [
+  { to: "/products/jjewellery", label: "J-Jewellery Software" },
+  { to: "/products/mtechbilling", label: "M-Tech Billing Software" },
+  { to: "/products/matecrestaurant", label: "Matec Restaurant Software" }
+];
+
+const quickLinks = [
+  { to: "/about", label: "About Us" },
+  { to: "/career", label: "Career" },
+  { to: "/faq", label: "FAQ" }
+];
 
 const Footer = () => {
-  const navigate = useNavigate();
-
   return (
     <div className="bg-tint w-full py-8 md:py-10 text-white px-4 sm:px-6 lg:px-8">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-20 text-base">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16 text-base">
+        
         {/* Contact Section */}
-        <div className="flex flex-col items-start">
-          <h2 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-yellow-500">Contact</h2>
-          <div className="flex flex-col gap-3 md:gap-4">
-            <div className="flex items-center gap-2">
-              <FaPhoneAlt className="text-yellow-500 text-xl md:text-2xl" />
-              <span className='text-xs md:text-sm'>01-5925122</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <FaEnvelope className="text-yellow-500 text-xl md:text-2xl" />
-              <span className='text-xs md:text-sm'>info@matrikatec.com.np</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <FaMapMarkerAlt className="text-yellow-500 text-xl md:text-2xl" />
-              <span className='text-xs md:text-sm'>New Baneshwor, Kathmandu, Nepal</span>
-            </div>
+        <div className="flex flex-col items-start space-y-4">
+          <h2 className="text-lg md:text-xl font-semibold mb-4 text-yellow-500">Contact</h2>
+          <div className="flex flex-col gap-3">
+            {contactInfo.map(({ icon, text }, index) => (
+              <div key={index} className="flex items-center gap-2">
+                {icon && <span className="text-yellow-500 text-xl md:text-2xl">{icon}</span>}
+                <span className='text-xs md:text-sm'>{text}</span>
+              </div>
+            ))}
           </div>
         </div>
 
         {/* Product Section */}
-        <div className="flex flex-col items-start mt-4 md:mt-0">
-          <h2 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-yellow-500">Product</h2>
-          <ul className="space-y-2 md:space-y-3">
-            <li className="hover:text-yellow-500 cursor-pointer text-xs md:text-sm">Restrobyte</li>
-            <li className="hover:text-yellow-500 cursor-pointer text-xs md:text-sm">J-Jewellery Software</li>
-            <li className="hover:text-yellow-500 cursor-pointer text-xs md:text-sm">e-Tender Application</li>
-            <li className="hover:text-yellow-500 cursor-pointer text-xs md:text-sm">Silicon POS</li>
-            <li className="hover:text-yellow-500 cursor-pointer text-xs md:text-sm">Silicon ERP</li>
+        <div className="flex flex-col items-start space-y-4">
+          <h2 className="text-lg md:text-xl font-semibold mb-4 text-yellow-500">Product</h2>
+          <ul className="space-y-3">
+            {products.map((product, index) => (
+              <li key={index} className="hover:text-yellow-500 cursor-pointer text-xs md:text-sm">
+                <NavLink to={product.to}>{product.label}</NavLink>
+              </li>
+            ))}
           </ul>
         </div>
 
         {/* Quick Links */}
-        <div className="flex flex-col items-start mt-4 md:mt-0">
-          <h2 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-yellow-500">Quick Links</h2>
-          <ul className="space-y-2 md:space-y-3">
-            <li 
-              onClick={() => navigate("/about")} 
-              className="hover:text-yellow-500 cursor-pointer text-xs md:text-sm"
-            >
-              About Us
-            </li>
-            <li 
-              onClick={() => navigate("/products")} 
-              className="hover:text-yellow-500 cursor-pointer text-xs md:text-sm"
-            >
-              Products
-            </li>
-            <li 
-              onClick={() => navigate("/portfolio")} 
-              className="hover:text-yellow-500 cursor-pointer text-xs md:text-sm"
-            >
-              Portfolio
-            </li>
-            <li 
-              onClick={() => navigate("/services")} 
-              className="hover:text-yellow-500 cursor-pointer text-xs md:text-sm"
-            >
-              Services
-            </li>
+        <div className="flex flex-col items-start space-y-4">
+          <h2 className="text-lg md:text-xl font-semibold mb-4 text-yellow-500">Quick Links</h2>
+          <ul className="space-y-3">
+            {quickLinks.map(({ to, label }, index) => (
+              <li key={index} className="text-xs md:text-sm">
+                <NavLink 
+                  to={to}
+                  className="hover:text-yellow-500 cursor-pointer"
+                >
+                  {label}
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

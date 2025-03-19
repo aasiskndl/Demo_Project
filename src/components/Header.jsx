@@ -12,7 +12,6 @@ const productLinks = [
   { name: "M-Tech Billing", path: "/products/mtechbilling" },
   { name: "JJewellery", path: "/products/jjewellery" },
   { name: "Matec Restaurant", path: "/products/matecrestaurant" },
-  { name: "Online Billing", path: "/products/online-billing" },
 ]
 
 const careerLinks = [{ name: "Career", path: "/career" }]

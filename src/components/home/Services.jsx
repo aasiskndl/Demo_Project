@@ -32,7 +32,7 @@ const service = [
       "We design and develop web solutions that cater to your business goals and user requirements, from custom web apps to marketing websites, integrating front-end, back-end, and infrastructure.",
     image: "/images/img.jpg",
   },
-  
+
 ];
 
 const Services = () => {
@@ -41,15 +41,19 @@ const Services = () => {
       {service.map((service, index) => (
         <motion.div
           key={index}
-          className={`flex flex-col-reverse md:flex-row ${
-            index % 2 !== 0 ? "md:flex-row-reverse" : ""
-          } items-center gap-10`}
-          initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }} // Start from outside
-          whileInView={{ opacity: 1, x: 0 }} // Animate to the center
-          transition={{ duration: 0.8, type: "spring", stiffness: 50 }} // Smooth transition
-          viewport={{ once: true}} // Trigger only once when the element enters the viewport
+          className={`flex flex-col-reverse md:flex-row ${index % 2 !== 0 ? "md:flex-row-reverse" : ""
+            } items-center gap-10`}
+          initial={{ opacity: 0, y: 100 }} // Comes from bottom
+          whileInView={{ opacity: 1, y: 0 }} // Moves to its original position
+          transition={{
+            duration: 0.8,
+            type: "spring",
+            stiffness: 50,
+            delay: index * 0.1, // Stagger the animation for each card
+          }}
+          viewport={{ once: true }} // Trigger only once when the element enters the viewport
         >
-          {/* text */}
+          {/* Text */}
           <div className="md:w-1/2 text-center md:text-left">
             <motion.h2
               className="text-3xl font-bold text-slate-800 mb-4"

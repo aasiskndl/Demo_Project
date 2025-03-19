@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 import ContactCard from '../ContactCard';
 import FormCard from '../FormCard';
 import LocationMap from '../LocationMap';
+import JJewelleryHero from './JJewelleryHero';
 const JJewellery = () => {
   const formik = useFormik({
     initialValues: {
@@ -33,18 +34,7 @@ const JJewellery = () => {
   return (
     <div className="bg-secondary min-h-screen p-4 sm:p-6 md:p-8 flex flex-col items-center">
       {/* Header Section */}
-      <div className="text-center max-w-4xl mb-6 md:mb-8">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-3">
-          <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
-            JJewellery
-          </span>
-        </h1>
-        <p className="text-gray-600 text-sm md:text-base leading-relaxed bg-yellow-50 p-4 rounded-lg shadow-sm">
-          JJewellery is a comprehensive software solution tailored for jewelry businesses, offering features like order management, billing, auto gold rate, stock control, karigar stock,
-          jewellery tag printing, and loan management. This all-in-one tool simplifies your business operations, helping you manage customer orders, track inventory, and handle financial
-          transactions with ease. JJewellery is designed to enhance efficiency and accuracy in your jewelry business, providing a seamless experience for both you and your customers.
-        </p>
-      </div>
+      <JJewelleryHero />
 
       {/* Cards Container */}
       <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
