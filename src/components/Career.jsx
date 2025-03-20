@@ -59,7 +59,7 @@ const Career = () => {
           <p className="text-gray-600 text-base sm:text-lg">
             Don't see your perfect role?{' '}
             <a 
-              href="#"
+              href="mailto:support@matrikatec.com.np"
               className="text-yellow-600 hover:text-yellow-700 font-semibold underline underline-offset-4 transition-colors"
             >
               Send us your resume

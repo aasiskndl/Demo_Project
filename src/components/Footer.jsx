@@ -2,8 +2,8 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 
 const contactInfo = [
-  { icon: <FaPhoneAlt />, text: "01-5925122" },
-  { icon: <FaEnvelope />, text: "info@matrikatec.com.np" },
+  { icon: <FaPhoneAlt />, text: "01-5925122", link: "tel:01-5925122" },
+  { icon: <FaEnvelope />, text: "info@matrikatec.com.np", link: "mailto:info@matrikatec.com.np" },
   { icon: <FaMapMarkerAlt />, text: "New Baneshwor, Kathmandu, Nepal" }
 ];
 
@@ -23,15 +23,21 @@ const Footer = () => {
   return (
     <div className="bg-tint w-full py-8 md:py-10 text-white px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16 text-base">
-        
+
         {/* Contact Section */}
         <div className="flex flex-col items-start space-y-4">
           <h2 className="text-lg md:text-xl font-semibold mb-4 text-yellow-500">Contact</h2>
           <div className="flex flex-col gap-3">
-            {contactInfo.map(({ icon, text }, index) => (
+            {contactInfo.map(({ icon, text, link }, index) => (
               <div key={index} className="flex items-center gap-2">
-                {icon && <span className="text-yellow-500 text-xl md:text-2xl">{icon}</span>}
-                <span className='text-xs md:text-sm'>{text}</span>
+                <span className="text-yellow-500 text-xl md:text-2xl">{icon}</span>
+                {link ? (
+                  <a href={link} className="text-xs md:text-sm hover:underline">
+                    {text}
+                  </a>
+                ) : (
+                  <span className="text-xs md:text-sm">{text}</span>
+                )}
               </div>
             ))}
           </div>
@@ -55,7 +61,7 @@ const Footer = () => {
           <ul className="space-y-3">
             {quickLinks.map(({ to, label }, index) => (
               <li key={index} className="text-xs md:text-sm">
-                <NavLink 
+                <NavLink
                   to={to}
                   className="hover:text-yellow-500 cursor-pointer"
                 >

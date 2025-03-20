@@ -31,9 +31,9 @@ const AboutUsCards = () => {
             duration: 0.5,
             type: "spring",
             stiffness: 50,
-            delay: index * 0.1, // Stagger the animation
+            delay: index * 0.1, 
           }}
-          viewport={{ once: true }} // Trigger animation only once when in viewport
+          viewport={{ once: true }} // Trigger animation only once
         >
           {/* Image Section */}
           <div
@@ -46,8 +46,8 @@ const AboutUsCards = () => {
             <motion.img
               src={image}
               alt={title}
-              className="w-full h-auto max-h-[400px] object-contain rounded-xl shadow-md"
-              whileHover={{ scale: 1.05 }} // Subtle scale effect on hover
+              className="w-full h-auto max-h-[400px] object-contain rounded-xl shadow-lg"
+              whileHover={{ scale: 1.05 }} //scale effect on hover
               transition={{ duration: 0.3 }}
             />
           </div>
@@ -63,7 +63,7 @@ const AboutUsCards = () => {
           >
             <motion.h2
               className="text-3xl font-bold text-slate-700 mb-4"
-              whileHover={{ scale: 1.05 }} // Subtle scale effect on hover
+              whileHover={{ scale: 1.05 }} //scale effect on hover
               transition={{ duration: 0.2 }}
             >
               {title}
