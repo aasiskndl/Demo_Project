@@ -46,7 +46,7 @@ const Services = () => {
           initial={{ opacity: 0, y: 100 }} // Comes from bottom
           whileInView={{ opacity: 1, y: 0 }} // Moves to its original position
           transition={{
-            duration: 0.8,
+            duration: 0.5,
             type: "spring",
             stiffness: 50,
             delay: index * 0.1, // Stagger the animation for each card

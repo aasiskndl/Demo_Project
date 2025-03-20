@@ -4,7 +4,7 @@ import { ChevronDown, Home, Menu, X } from "lucide-react"
 
 // Navigation data
 const companyLinks = [
-  { name: "About", path: "/about" },
+  { name: "About Us", path: "/about" },
   { name: "FAQ", path: "/faq" },
 ]
 

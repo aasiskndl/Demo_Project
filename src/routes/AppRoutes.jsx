@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Hero from "../components/home/Hero";
-import AboutUs from "../components/AboutUs";
+import AboutUs from "../components/aboutus/AboutUs";
 import FAQ from "../components/FAQ";
 import Career from "../components/Career";
 import MtechBilling from "../components/projects/mtech-billing/MtechBilling";
