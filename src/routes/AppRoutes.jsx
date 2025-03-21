@@ -9,6 +9,7 @@ import JJewellery from "../components/projects/jjewellery/JJewellery";
 import MatecRestaurant from "../components/projects/matec-restaurant/MatecRestaurant";
 import Services from "../components/services/Services";
 import ScrollToTop from './ScrollToTop';
+import ContactPage from "../components/contact/ContactPage";
 
 const AppRoutes = () => {
   return (
@@ -23,6 +24,7 @@ const AppRoutes = () => {
       <Route path="/products/jjewellery" element={<JJewellery />} />
       <Route path="/products/matecrestaurant" element={<MatecRestaurant />} />
       < Route path="/services" element={<Services />} />
+      < Route path="/contact" element={<ContactPage />} />
     </Routes>
     </>
   );

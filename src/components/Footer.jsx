@@ -16,7 +16,8 @@ const products = [
 const quickLinks = [
   { to: "/about", label: "About Us" },
   { to: "/career", label: "Career" },
-  { to: "/faq", label: "FAQ" }
+  { to: "/faq", label: "FAQ" },
+  { to: "/contact", label: "Contact Us" }
 ];
 
 const Footer = () => {
