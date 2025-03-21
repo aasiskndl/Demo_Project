@@ -5,7 +5,7 @@ const Banner = () => {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <section className="relative py-16 md:py-28 px-4 sm:px-6 lg:px-16 overflow-hidden -mt-6">
+    <section className="bg-secondary relative py-16 md:py-28 px-4 sm:px-6 lg:px-16 overflow-hidden -mt-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* Left Text Section */}
@@ -34,14 +34,15 @@ const Banner = () => {
 
           {/* Right Image Section */}
           <div className="relative">
-            <div className="bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200">
+            <div className="bg-white rounded-lg overflow-hidden max-w-5xl mx-auto">
               <img
-                src="/images/img.jpg?height=600&width=800"
+                src="/images/dashboard.webp?height=600&width=800"
                 alt="Dashboard Preview"
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-contain"
               />
             </div>
           </div>
+
         </div>
       </div>
     </section>

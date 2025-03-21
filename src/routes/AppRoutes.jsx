@@ -7,6 +7,7 @@ import Career from "../components/Career";
 import MtechBilling from "../components/projects/mtech-billing/MtechBilling";
 import JJewellery from "../components/projects/jjewellery/JJewellery";
 import MatecRestaurant from "../components/projects/matec-restaurant/MatecRestaurant";
+import Services from "../components/services/Services";
 import ScrollToTop from './ScrollToTop';
 
 const AppRoutes = () => {
@@ -21,6 +22,7 @@ const AppRoutes = () => {
       <Route path="/products/mtechbilling" element={<MtechBilling />} />
       <Route path="/products/jjewellery" element={<JJewellery />} />
       <Route path="/products/matecrestaurant" element={<MatecRestaurant />} />
+      < Route path="/services" element={<Services />} />
     </Routes>
     </>
   );

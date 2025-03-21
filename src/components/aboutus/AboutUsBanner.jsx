@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ArrowRight } from "lucide-react";
 const AboutUsBanner = () => {
     return (
-        <div className='relative py-16 md:py-28 px-4 sm:px-6 lg:px-16 overflow-hidden -mt-6'>
+        <div className='bg-secondary relative py-16 md:py-28 px-4 sm:px-6 lg:px-16 overflow-hidden -mt-6'>
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                     {/* Left Text Section */}

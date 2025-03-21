@@ -20,7 +20,7 @@ const content = [
 
 const AboutUsCards = () => {
   return (
-    <div className="bg-white py-12 px-4 sm:px-8 lg:px-24 space-y-20">
+    <div className="bg-secondary py-12 px-4 sm:px-8 lg:px-24 space-y-20">
       {content.map(({ title, image, description, reverse }, index) => (
         <motion.div
           key={index}

@@ -5,26 +5,26 @@ const service = [
   {
     title: "UI / UX Designing",
     description:
-      "Our UI/UX development team specializes in creating visually appealing and user-friendly interfaces that enhance the overall user experience. We pride ourselves on our ability to seamlessly integrate cutting-edge features into our designs.",
-    image: "/images/img.jpg",
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, placeat saepe reiciendis, aut provident voluptate sunt illo laudantium similique quaerat ipsam maiores architecto, et dolore eum accusantium perspiciatis amet eius",
+    image: "/images/service.jpg",
   },
   {
     title: "Custom Software Development",
     description:
-      "In the fast-paced and competitive business world of today, custom software development is an effective tool to attain optimal business performance. We create solutions tailored to your needs.",
-    image: "/images/img.jpg",
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, placeat saepe reiciendis, aut provident voluptate sunt illo laudantium similique quaerat ipsam maiores architecto, et dolore eum accusantium perspiciatis amet eius",
+    image: "/images/service.jpg",
   },
   {
     title: "Web Design & Development",
     description:
-      "We design and develop web solutions that cater to your business goals and user requirements, from custom web apps to marketing websites, integrating front-end, back-end, and infrastructure.",
-    image: "/images/img.jpg",
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, placeat saepe reiciendis, aut provident voluptate sunt illo laudantium similique quaerat ipsam maiores architecto, et dolore eum accusantium perspiciatis amet eius",
+    image: "/images/service.jpg",
   },
 ];
 
-const Services = () => {
+const ServicesForJewellers = () => {
   return (
-    <section className="px-4 md:px-10 lg:px-20 py-8 bg-gray-50 space-y-20">
+    <section className="px-4 md:px-10 lg:px-20 py-8 bg-secondary space-y-20">
       <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-700 justify-center text-center">
         Our Services For Jeweller's
       </h1>
@@ -52,7 +52,7 @@ const Services = () => {
             `}
           >
             <motion.h2
-              className="text-3xl font-bold text-slate-800 mb-4"
+              className="text-3xl font-bold text-slate-700 mb-4"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
             >
@@ -90,4 +90,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default ServicesForJewellers;

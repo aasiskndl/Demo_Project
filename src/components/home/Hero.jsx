@@ -1,12 +1,12 @@
 import React from 'react';
 import Banner from './Banner';
-import Services from './Services';
+import ServicesForJewellers from './ServicesForJewellers';
 import MobileBanner from './MobileBanner';
 const Hero = () => {
   return (
     <>
       <Banner />
-      <Services />
+      <ServicesForJewellers />
       <MobileBanner />
     </>
     

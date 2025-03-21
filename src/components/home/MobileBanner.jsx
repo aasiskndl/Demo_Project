@@ -21,7 +21,7 @@ const MobileBanner = () => {
         {/* text */}
         <div className="md:w-1/2 text-center md:text-left">
           <h2 className="text-4xl font-bold text-slate-700 mb-4">Lorem Ipsum Dorem</h2>
-          <p className='text-slate-600 mb-6 leading-relaxed'>
+          <p className='text-slate-700 mb-6 leading-relaxed'>
             Lorem ipsum dolor sit Eos explicabo dolorem hic, voluptas distinctio vitae, modi velit veritatis, esse exercitationem
             libero quia iste. Illum quidem rem perferendis amet!
           </p>
