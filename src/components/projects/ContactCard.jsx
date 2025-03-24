@@ -13,8 +13,8 @@ export default function ContactCard() {
         <div className="space-y-4 md:space-y-6 mt-2 md:mt-4">
           <div className="flex items-center gap-3 md:gap-4">
             <Mail className="text-gray-400 w-5 h-5 md:w-6 md:h-6" />
-            <a href="mailto:info@.com" className="text-gray-400 hover:text-white text-sm md:text-base">
-              info@.com
+            <a href="mailto:support@matrikatec.com.np" className="text-gray-400 hover:text-white text-sm md:text-base">
+              support@matrikatec.com.np
             </a>
           </div>
 

@@ -50,7 +50,6 @@ const JJewellery = () => {
           <LocationMap />
         </div>
       </div>
-
     </div>
   );
 };

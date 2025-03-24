@@ -73,7 +73,7 @@ const MtechBillingHero = () => {
               initial={{ opacity: 0, y: 100 }} // Comes from the bottom
               whileInView={{ opacity: 1, y: 0 }} // Moves to original position
               transition={{
-                duration: 0.5,
+                duration: 0.2,
                 type: 'spring',
                 stiffness: 50,
                 delay: index * 0.1, // Stagger the animation for each card
