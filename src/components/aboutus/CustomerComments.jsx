@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
   {
@@ -17,36 +17,36 @@ const testimonials = [
   },
   {
     id: 3,
-    name: "Sara Dahal",
+    name: "Ankit Sharma",
     image: "/images/profile.svg",
     text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ex aliquam enim vitae deleniti adipisci magnam quae pariatur totam, nemo eius doloribus aut placeat, esse nisi nesciunt soluta explicabo veniam!",
   },
   {
     id: 4,
-    name: "Sara Dahal",
+    name: "Riya Shrestha",
     image: "/images/profile.svg",
     text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ex aliquam enim vitae deleniti adipisci magnam quae pariatur totam, nemo eius doloribus aut placeat, esse nisi nesciunt soluta explicabo veniam!",
   },
-]
+];
 
 export default function CustomerComments() {
-  const [index, setIndex] = useState(0)
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      nextSlide()
-    }, 7000)
+      nextSlide();
+    }, 7000);
 
-    return () => clearInterval(interval)
-  }, [])
+    return () => clearInterval(interval);
+  }, []);
 
   const prevSlide = () => {
-    setIndex((prevIndex) => (prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1))
-  }
+    setIndex((prevIndex) => (prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1));
+  };
 
   const nextSlide = () => {
-    setIndex((prevIndex) => (prevIndex + 1) % testimonials.length)
-  }
+    setIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+  };
 
   return (
     <div className="flex flex-col items-center justify-center p-4 bg-secondary min-h-screen">
@@ -59,10 +59,10 @@ export default function CustomerComments() {
       </p>
 
       <div className="relative w-full max-w-xl px-6 md:px-0 md:max-w-3xl lg:max-w-4xl">
-        {/* Left Arrow - Hidden on Mobile */}
+        {/* Left Arrow (visible only on large devices and above) */}
         <button
           onClick={prevSlide}
-          className="hidden md:block absolute left-0 md:left-[-70px] top-1/2 transform -translate-y-1/2 bg-white shadow-lg p-3 rounded-full hover:bg-gray-200 transition"
+          className="hidden lg:block absolute left-[-40px] lg:left-[-70px] top-1/2 transform -translate-y-1/2 bg-white shadow-lg p-3 rounded-full hover:bg-gray-200 transition"
         >
           <ChevronLeft size={24} />
         </button>
@@ -74,24 +74,26 @@ export default function CustomerComments() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -50 }}
             transition={{ duration: 0.6, ease: "easeInOut" }}
-            className="bg-answer p-4 rounded-xl shadow-md text-center mx-auto w-full md:w-[90%] lg:w-[80%] md:p-6 lg:p-8 md:shadow-lg"
+            className="bg-white p-6 rounded-xl shadow-md text-center mx-auto w-full max-w-[90%] sm:max-w-[80%] md:max-w-[75%] lg:max-w-[60%]"
           >
             <img
               src={testimonials[index].image || "/placeholder.svg"}
               alt={testimonials[index].name}
-              className="w-16 h-16 rounded-full mx-auto mb-2 md:w-20 md:h-20 md:mb-6"
+              className="w-16 h-16 rounded-full mx-auto mb-4 md:w-20 md:h-20"
             />
-            <h4 className="text-lg text-slate-700 font-semibold md:text-xl lg:text-2xl">{testimonials[index].name}</h4>
-            <p className="text-slate-600 text-center max-w-2xl mb-6 md:mb-10">
+            <h4 className="text-lg text-slate-700 font-semibold md:text-xl lg:text-2xl">
+              {testimonials[index].name}
+            </h4>
+            <p className="text-slate-600 text-center text-sm md:text-base mt-3">
               {testimonials[index].text}
             </p>
           </motion.div>
         </AnimatePresence>
 
-        {/* Right Arrow - Hidden on Mobile */}
+        {/* Right Arrow (visible only on large devices and above) */}
         <button
           onClick={nextSlide}
-          className="hidden md:block absolute right-0 md:right-[-70px] top-1/2 transform -translate-y-1/2 bg-white shadow-lg p-3 rounded-full hover:bg-gray-200 transition"
+          className="hidden lg:block absolute right-[-40px] lg:right-[-70px] top-1/2 transform -translate-y-1/2 bg-white shadow-lg p-3 rounded-full hover:bg-gray-200 transition"
         >
           <ChevronRight size={24} />
         </button>
@@ -110,6 +112,5 @@ export default function CustomerComments() {
         </div>
       </div>
     </div>
-  )
+  );
 }
-

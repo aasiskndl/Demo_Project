@@ -60,10 +60,9 @@ const OurPromise = () => {
         <p className="text-slate-600 text-base leading-relaxed mb-6 max-w-xl mx-auto">
           Let’s turn your ideas into reality. Reach out today and see how we can bring your vision to life with our reliable and efficient solutions.
         </p>
-        <button 
-        className="group inline-flex items-center px-6 py-3 bg-gray-700 hover:bg-yellow-500 text-white rounded-md transition-colors duration-300"
-        onClick={handleContactClick}
-        >
+        <button
+          className="group inline-flex items-center px-6 py-3 bg-gray-700 hover:bg-yellow-500 text-white rounded-md transition-colors duration-300"
+          onClick={handleContactClick} >
           Contact Us
           <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
         </button>

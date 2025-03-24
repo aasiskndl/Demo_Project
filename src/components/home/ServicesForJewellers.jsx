@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 
 const service = [
   {
@@ -29,18 +28,9 @@ const ServicesForJewellers = () => {
         Our Services For Jeweller's
       </h1>
       {service.map((service, index) => (
-        <motion.div
+        <div
           key={index}
           className="flex flex-col md:flex-row items-center gap-10"
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.5,
-            type: "spring",
-            stiffness: 50,
-            delay: index * 0.1,
-          }}
-          viewport={{ once: true }}
         >
           {/* Text Section */}
           <div
@@ -51,40 +41,30 @@ const ServicesForJewellers = () => {
               text-center md:text-left
             `}
           >
-            <motion.h2
-              className="text-3xl font-bold text-slate-700 mb-4"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.2 }}
-            >
+            <h2 className="text-3xl font-bold text-slate-700 mb-4">
               {service.title}
-            </motion.h2>
+            </h2>
             <p className="text-slate-600 mb-6">{service.description}</p>
-            <motion.button
-              className="bg-gray-700 text-white px-6 py-2 rounded hover:bg-yellow-500 duration-300"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.2 }}
-            >
+            <button className="bg-gray-700 text-white px-6 py-2 rounded hover:bg-yellow-500 duration-300">
               Read More
-            </motion.button>
+            </button>
           </div>
 
           {/* Image Section */}
-          <motion.div
+          <div
             className={`
               w-full md:w-1/2 
               order-2 
               ${index % 2 !== 0 ? "md:order-1" : "md:order-2"}
             `}
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.9 }}
           >
             <img
               src={service.image}
               alt={service.title}
               className="w-full h-auto max-w-[500px] mx-auto shadow-sm rounded-lg"
             />
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       ))}
     </section>
   );
