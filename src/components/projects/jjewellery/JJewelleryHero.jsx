@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import image from '/images/mobile.jpg';
+import { ArrowRight } from "lucide-react";
+import image from '/images/dashboard.webp';
+import { useNavigate } from 'react-router-dom';
 
 // Constants on the webpage
 const features = [
@@ -31,6 +33,11 @@ const features = [
 ];
 
 const JJewelleryHero = () => {
+  const navigate = useNavigate();
+
+  const handleContactClick = () => {
+    navigate('/contact');
+  };
   return (
     <div className='bg-secondary'>
       {/* Hero Section */}
@@ -42,9 +49,12 @@ const JJewelleryHero = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dolorum magnam quas voluptas iure tenetur. Nostrum magnam aspernatur quis nulla numquam expedita consequatur saepe, dignissimos molestias recusandae, totam repudiandae rerum.
         </p>
         <div className='mt-8 flex justify-center gap-4'>
-          <button className='bg-gray-700 hover:bg-yellow-500 py-2 px-6 rounded-md shadow text-white font-semibold transition-colors duration-300 transform hover:scale-[1.02]'>
-            Get A Free Demo
-          </button>
+        <button
+          className="group inline-flex items-center px-6 py-3 bg-gray-700 hover:bg-yellow-500 text-white rounded-md transition-colors duration-300"
+          onClick={handleContactClick} >
+          Get Free Demo
+          <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+        </button>
           <button className='bg-gray-700 hover:bg-yellow-500 text-white py-2 px-6 rounded-md shadow font-semibold transition-colors duration-300 transform hover:scale-[1.02]'>
             Demo Video
           </button>

@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from 'react-router-dom';
 
 const Banner = () => {
+  const navigate = useNavigate();
+
+  const handleContactClick = () => {
+    navigate('/contact');
+  };
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -23,9 +29,8 @@ const Banner = () => {
             {/* Button */}
             <div className="flex flex-wrap gap-4">
               <button
-                onClick={() => setShowModal(true)}
                 className="group inline-flex items-center px-6 py-3 bg-gray-700 hover:bg-yellow-500 text-white rounded-md transition-colors duration-300"
-              >
+                onClick={handleContactClick} >
                 Get Free Demo
                 <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </button>
@@ -42,7 +47,6 @@ const Banner = () => {
               />
             </div>
           </div>
-
         </div>
       </div>
     </section>

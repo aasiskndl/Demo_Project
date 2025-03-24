@@ -45,9 +45,9 @@ const ServicesForJewellers = () => {
               {service.title}
             </h2>
             <p className="text-slate-600 mb-6">{service.description}</p>
-            <button className="bg-gray-700 text-white px-6 py-2 rounded hover:bg-yellow-500 duration-300">
+            {/* <button className="bg-gray-700 text-white px-6 py-2 rounded hover:bg-yellow-500 duration-300">
               Read More
-            </button>
+            </button> */}
           </div>
 
           {/* Image Section */}
