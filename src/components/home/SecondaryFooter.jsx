@@ -33,7 +33,6 @@ const SecondaryFooter = () => {
   return (
     <section
       className='px-4 md:px-10 lg:px-20 py-16 rounded-t-xl border-green-200 border-b-2 text-center text-gray-300 bg-slate-800'
-      // style={{ background: 'linear-gradient(to bottom, #cffafe, #1A4849)' }}
     >
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {contactDetails.map((item, index) => (

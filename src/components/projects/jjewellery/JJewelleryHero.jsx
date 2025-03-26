@@ -7,30 +7,35 @@ import { useNavigate } from 'react-router-dom';
 // Constants on the webpage
 const features = [
   {
-    title: "Hello hi",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid libero saepe soluta at? Libero eaque tenetur iste enim autem! Omnis, sint totam. Nulla exercitationem veniam vero saepe optio cum illo!"
+    title: "Comprehensive Order Management",
+    description: "Easily manage and track customer orders from start to finish. With JJewellery's order management system, you can stay organized, ensuring timely deliveries and satisfied customers."
   },
   {
-    title: "Hello hi",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid libero saepe soluta at? Libero eaque tenetur iste enim autem! Omnis, sint totam. Nulla exercitationem veniam vero saepe optio cum illo!"
+    title: "Effortless Billing & Invoicing",
+    description: "Create accurate invoices and bills effortlessly. JJewellery ensures that all your billing processes are streamlined and automated, minimizing errors and saving time."
   },
   {
-    title: "Hello hi",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid libero saepe soluta at? Libero eaque tenetur iste enim autem! Omnis, sint totam. Nulla exercitationem veniam vero saepe optio cum illo!"
+    title: "Auto Gold Rate Updates",
+    description: "Stay on top of fluctuating gold prices with real-time, automated gold rate updates. This feature helps you maintain accurate pricing and make informed decisions for your business."
   },
   {
-    title: "Hello hi",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid libero saepe soluta at? Libero eaque tenetur iste enim autem! Omnis, sint totam. Nulla exercitationem veniam vero saepe optio cum illo!"
+    title: "Inventory & Stock Control",
+    description: "Track your stock in real-time, manage raw materials and finished products efficiently. JJewellery ensures that you never run out of stock or overstock, optimizing your inventory."
   },
   {
-    title: "Hello hi",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid libero saepe soluta at? Libero eaque tenetur iste enim autem! Omnis, sint totam. Nulla exercitationem veniam vero saepe optio cum illo!"
+    title: "Karigar (Artisan) Stock Management",
+    description: "Keep track of materials issued to your karigars (artisans) and monitor the progress of their work. This feature helps ensure smooth operations within your workshop and reduces manual tracking errors."
   },
   {
-    title: "Hello hi",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid libero saepe soluta at? Libero eaque tenetur iste enim autem! Omnis, sint totam. Nulla exercitationem veniam vero saepe optio cum illo!"
+    title: "Jewellery Tag Printing",
+    description: "Generate custom jewelry tags with detailed information, such as weight, material, and pricing. This feature helps maintain consistency and professionalism across your products."
   },
+  {
+    title: "Loan & Finance Management",
+    description: "Manage customer loans with ease. JJewellery helps you track loan amounts, payments, and interest calculations, ensuring transparency and reducing the risk of financial errors."
+  }
 ];
+
 
 const JJewelleryHero = () => {
   const navigate = useNavigate();
@@ -43,10 +48,10 @@ const JJewelleryHero = () => {
       {/* Hero Section */}
       <section className='text-center px-6 py-16'>
         <h1 className='text-4xl md:text-5xl font-bold text-slate-700 leading-tight'>
-          Lorem Ipsum Dorem <br /> Hiojd Kiewf Bfeif
+        JJewellery Software
         </h1>
         <p className='mt-6 max-w-7xl mx-auto text-lg text-slate-600'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dolorum magnam quas voluptas iure tenetur. Nostrum magnam aspernatur quis nulla numquam expedita consequatur saepe, dignissimos molestias recusandae, totam repudiandae rerum.
+        JJewellery is a comprehensive software solution tailored for jewelry businesses, offering features like order management, billing, auto gold rate, stock control, karigar stock, jewellery tag printing, and loan management. This all-in-one tool simplifies your business operations, helping you manage customer orders, track inventory, and handle financial transactions with ease. JJewellery is designed to enhance efficiency and accuracy in your jewelry business, providing a seamless experience for both you and your customers.
         </p>
         <div className='mt-8 flex justify-center gap-4'>
         <button
@@ -74,7 +79,7 @@ const JJewelleryHero = () => {
 
       {/* Features Section with Animation */}
       <section className='bg-secondary py-16 px-6 flex flex-col'>
-        <h2 className='text-3xl md:text-4xl font-bold text-center mb-10 text-slate-700'>Our Features</h2>
+        <h2 className='text-3xl md:text-4xl font-bold text-center mb-10 text-slate-700'>Key Features</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto'>
           {features.map((feature, index) => (
             <motion.div
@@ -91,7 +96,7 @@ const JJewelleryHero = () => {
               viewport={{ once: true }} // Trigger the animation only once when it's in view
             >
               <h3 className='text-xl mb-4 text-slate-700'>{feature.title}</h3>
-              <p className='text-sm text-slate-600 leading-relaxed'>{feature.description}</p>
+              <p className='text-md text-slate-600 leading-relaxed'>{feature.description}</p>
             </motion.div>
           ))}
         </div>

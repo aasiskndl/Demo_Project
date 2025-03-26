@@ -2,28 +2,34 @@ import React from "react";
 
 const service = [
   {
-    title: "UI / UX Designing",
+    title: "Comprehensive Order & Billing Management",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, placeat saepe reiciendis, aut provident voluptate sunt illo laudantium similique quaerat ipsam maiores architecto, et dolore eum accusantium perspiciatis amet eius",
-    image: "/images/service.jpg",
+      "Streamline your jewelry business with an efficient order and billing system. Generate invoices, track payments, and manage customer orders seamlessly, ensuring accuracy and quick transactions.",
+    image: "/images/app-dev.svg",
   },
   {
-    title: "Custom Software Development",
+    title: "Real-Time Gold Rate & Stock Control",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, placeat saepe reiciendis, aut provident voluptate sunt illo laudantium similique quaerat ipsam maiores architecto, et dolore eum accusantium perspiciatis amet eius",
-    image: "/images/service.jpg",
+      "Stay updated with automated gold rate adjustments and manage your stock effortlessly. Track inventory, prevent stock shortages, and maintain precise control over raw materials and finished jewelry.",
+    image: "/images/app-dev.svg",
   },
   {
-    title: "Web Design & Development",
+    title: "Jewellery Tag Printing & Karigar Stock Management",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, placeat saepe reiciendis, aut provident voluptate sunt illo laudantium similique quaerat ipsam maiores architecto, et dolore eum accusantium perspiciatis amet eius",
-    image: "/images/service.jpg",
+      "Print customized jewelry tags with essential details and manage karigar (artisan) stock efficiently. Keep track of gold issued, work progress, and returns, ensuring a smooth workflow in your workshop.",
+    image: "/images/app-dev.svg",
+  },
+  {
+    title: "Loan & Finance Management",
+    description:
+      "Simplify customer loan handling with an integrated finance management system. Maintain records of gold loans, payment schedules, and interest calculations, reducing manual errors and ensuring financial trapp-dev.svg",
+    image: "/images/app-dev.svg",
   },
 ];
 
 const ServicesForJewellers = () => {
   return (
-    <section className="px-4 md:px-10 lg:px-20 py-8 bg-secondary space-y-20">
+    <section className="px-4 md:px-10 lg:px-20 py-11 bg-secondary space-y-20">
       <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-700 justify-center text-center">
         Our Services For Jeweller's
       </h1>
@@ -44,10 +50,8 @@ const ServicesForJewellers = () => {
             <h2 className="text-3xl font-bold text-slate-700 mb-4">
               {service.title}
             </h2>
-            <p className="text-slate-600 mb-6">{service.description}</p>
-            {/* <button className="bg-gray-700 text-white px-6 py-2 rounded hover:bg-yellow-500 duration-300">
-              Read More
-            </button> */}
+            <p className="text-slate-600 mb-4 text-lg ">{service.description}</p>
+            
           </div>
 
           {/* Image Section */}

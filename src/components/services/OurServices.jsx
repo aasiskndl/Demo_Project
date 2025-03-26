@@ -4,25 +4,25 @@ const servicesData = [
   {
     title: "Web Development",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint possimus ab error placeat id accusantium quasi facere, sequi iusto consequatur incidunt eaque soluta velit facilis non maiores fuga laboriosam omnis.",
+      "We specialize in creating responsive and dynamic websites tailored to your jewelry business needs. From custom e-commerce platforms to business management solutions, our web development services ensure your online presence is seamless, user-friendly, and optimized for both performance and conversion.",
     image: "/images/web-dev.svg", 
   },
   {
     title: "Custom Software Development",
     description:
-      "Tailored software solutions for unique business needs, ensuring efficiency and competitive edge.",
+      "At Matrika Technology, we provide bespoke software solutions that cater to the unique needs of your jewelry business. Whether you need a comprehensive inventory management system, order tracking, or financial tools, our custom software development ensures your operations run smoothly, with features designed specifically for your business requirements.",
     image: "/images/custom-dev.svg", 
   },
   {
     title: "Mobile App Development",
     description:
-      "Engaging, high-performance mobile apps for iOS and Android that bring your ideas to life.",
+      "We offer mobile app development services to bring your jewelry business to the fingertips of your customers. Our mobile apps are designed for ease of use, allowing your customers to browse your catalog, place orders, track deliveries, and even manage their accounts directly from their smartphones. Expand your reach and improve customer engagement with a personalized mobile experience.",
     image: "/images/app-dev.svg", 
   },
   {
     title: "UI/UX Design",
     description:
-      "User-centric designs that blend aesthetics with intuitive interfaces for delightful experiences.",
+      "We create visually appealing and intuitive user interfaces that enhance the user experience. Our UI/UX design services focus on making your digital platforms easy to navigate, ensuring both customers and employees can use them with ease. We prioritize clean, functional design that meets both aesthetic and usability standards, enhancing satisfaction and engagement.",
     image: "/images/ui-ux.svg", 
   },
 ];
@@ -33,7 +33,7 @@ const ServicesPage = () => {
     {servicesData.map((service, index) => (
       <section
         key={index}
-        className="py-16 px-4 sm:px-8 lg:px-24"
+        className="py-16 px-4 sm:px-8 lg:px-16"
       >
         <div
           className={`

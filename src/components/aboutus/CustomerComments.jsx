@@ -7,25 +7,25 @@ const testimonials = [
     id: 1,
     name: "Hari Baral",
     image: "/images/profile.svg",
-    text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ex aliquam enim vitae deleniti adipisci magnam quae pariatur totam, nemo eius doloribus aut placeat, esse nisi nesciunt soluta explicabo veniam!",
+    text: "The inventory management system has been a game-changer for us. We no longer worry about stock shortages, and the real-time gold rate updates are incredibly useful. Thank you, Matrika Technology, for providing such a reliable solution!",
   },
   {
     id: 2,
     name: "Sara Dahal",
     image: "/images/profile.svg",
-    text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ex aliquam enim vitae deleniti adipisci magnam quae pariatur totam, nemo eius doloribus aut placeat, esse nisi nesciunt soluta explicabo veniam!",
+    text: "Matrika Technology has completely transformed the way we manage our business. The order management and billing features are easy to use and have helped us streamline our operations. Highly recommended for any jewelry business!",
   },
   {
     id: 3,
     name: "Ankit Sharma",
     image: "/images/profile.svg",
-    text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ex aliquam enim vitae deleniti adipisci magnam quae pariatur totam, nemo eius doloribus aut placeat, esse nisi nesciunt soluta explicabo veniam!",
+    text: "The custom software developed for our business is tailored perfectly to our needs. The loan and finance management system has made our work so much easier and more efficient. We’ve seen a significant improvement in our day-to-day operations.",
   },
   {
     id: 4,
     name: "Riya Shrestha",
     image: "/images/profile.svg",
-    text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ex aliquam enim vitae deleniti adipisci magnam quae pariatur totam, nemo eius doloribus aut placeat, esse nisi nesciunt soluta explicabo veniam!",
+    text: "The mobile app developed by Matrika Technology is fantastic. It’s simple, user-friendly, and makes managing our business on the go much easier. Our customers love it too, and it has increased engagement with our brand!",
   },
 ];
 
@@ -53,7 +53,7 @@ export default function CustomerComments() {
       <h2 className="text-3xl font-bold text-slate-700 mb-4 text-center md:text-4xl">
         Check Reviews From Our Satisfied Clients
       </h2>
-      <p className="text-slate-600 text-center max-w-2xl mb-6 md:mb-10">
+      <p className="text-slate-600 text-center text-lg max-w-2xl mb-6 md:mb-10">
         Checking these reviews will give you insight into the experiences of our satisfied clients. These testimonials
         reflect the quality of our products or services, and the satisfaction of our customers.
       </p>
@@ -81,7 +81,7 @@ export default function CustomerComments() {
               alt={testimonials[index].name}
               className="w-16 h-16 rounded-full mx-auto mb-4 md:w-20 md:h-20"
             />
-            <h4 className="text-lg text-slate-700 font-semibold md:text-xl lg:text-2xl">
+            <h4 className="text-lg text-slate-700 font-semibold md:text-xl  lg:text-2xl">
               {testimonials[index].name}
             </h4>
             <p className="text-slate-600 text-center text-sm md:text-base mt-3">

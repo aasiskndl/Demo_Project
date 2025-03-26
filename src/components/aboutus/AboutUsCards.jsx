@@ -5,14 +5,14 @@ const content = [
     title: "Our Vision",
     image: "/images/ourvision.webp",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, similique ducimus nobis neque saepe corporis accusantium est rerum iusto quidem debitis quibusdam deleniti sed quisquam! A voluptatem officiis repudiandae laboriosam.",
+      "Our vision is to be the leading provider of innovative software solutions for the jewelry industry, enabling businesses worldwide to operate seamlessly and grow sustainably. We strive to create a future where technology drives the success of every jeweler, transforming the way they manage orders, inventory, finances, and more, with a focus on long-term growth and customer satisfaction.",
     reverse: false,
   },
   {
     title: "Our Mission",
     image: "/images/ourmission.webp",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas voluptatum error, soluta tenetur a vel voluptates nisi aspernatur repellat quos unde laboriosam eum enim quam dignissimos accusamus perferendis quibusdam culpa.",
+      "At Matrika Technology, our mission is to revolutionize the jewelry industry by providing cutting-edge software solutions that simplify business operations, enhance efficiency, and improve accuracy. We aim to empower jewelers with the tools they need to streamline their processes, increase productivity, and deliver exceptional customer service, all while staying ahead of industry trends.",
     reverse: true,
   },
 ];

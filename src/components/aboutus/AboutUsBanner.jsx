@@ -14,10 +14,13 @@ const AboutUsBanner = () => {
                     {/* Left Text Section */}
                     <div className="space-y-6">
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-700 leading-tight">
-                            About Us description title
+                            About Us 
                         </h1>
                         <p className="text-base sm:text-lg text-slate-600">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas commodi quam illum veniam modi pariatur et odit ut, obcaecati dolorum architecto distinctio mollitia eligendi corrupti corporis vero asperiores? Voluptate, repudiandae?
+                        At Matrika Technology, we specialize in providing innovative and user-friendly software solutions tailored for the jewelry industry. Our platform is designed to simplify and 
+                        streamline every aspect of your jewelry business, from order management and billing to inventory control and gold rate tracking. With a focus on enhancing efficiency and accuracy, 
+                        we empower jewelers to manage their operations seamlessly, reduce manual errors, and deliver 
+                        exceptional service to their customers. Whether you run a small shop or a large-scale jewelry business, Matrika Technology is here to support your growth and success.
                         </p>
                         {/* Button */}
                         <div className="flex flex-wrap gap-4">

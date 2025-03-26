@@ -20,10 +20,7 @@ const Banner = () => {
               Matrika Technology <br /> For Jeweller's
             </h1>
             <p className="text-base sm:text-lg text-slate-600">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-              accusamus dicta iusto omnis quaerat natus inventore veniam animi
-              dolorum? Aspernatur ipsam expedita mollitia molestiae, culpa
-              libero facere temporibus quo ut?
+            Powerful, Easy-to-Use Software for Seamless Jewellery Business Management – From Billing to Stock Control, Everything at Your Fingertips!
             </p>
 
             {/* Button */}

@@ -6,30 +6,31 @@ import { ArrowRight } from "lucide-react";
 // Constants on the webpage
 const features = [
   {
-    title: "Hello hi",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid libero saepe soluta at? Libero eaque tenetur iste enim autem! Omnis, sint totam. Nulla exercitationem veniam vero saepe optio cum illo!"
+    title: "Certified by IRD Nepal",
+    description: "M-Tech Billing is fully certified by the Inland Revenue Department (IRD) of Nepal, ensuring that your business complies with all government regulations. Stay confident that your billing processes are always in line with legal standards."
   },
   {
-    title: "Hello hi",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid libero saepe soluta at? Libero eaque tenetur iste enim autem! Omnis, sint totam. Nulla exercitationem veniam vero saepe optio cum illo!"
+    title: "Accurate Bill Generation",
+    description: "Generate precise invoices and bills without the risk of errors. M-Tech Billing ensures that all financial transactions are recorded accurately, making your invoicing process smooth and reliable."
   },
   {
-    title: "Hello hi",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid libero saepe soluta at? Libero eaque tenetur iste enim autem! Omnis, sint totam. Nulla exercitationem veniam vero saepe optio cum illo!"
+    title: "Seamless Transaction Management",
+    description: "Manage and track all your business transactions effortlessly. From payments to refunds and adjustments, M-Tech Billing helps you handle every aspect of your financial operations with ease."
   },
   {
-    title: "Hello hi",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid libero saepe soluta at? Libero eaque tenetur iste enim autem! Omnis, sint totam. Nulla exercitationem veniam vero saepe optio cum illo!"
+    title: "Effortless Record Keeping",
+    description: "M-Tech Billing automatically stores detailed records of every transaction. Maintain organized financial data that is easy to access, simplifying reporting, auditing, and tax filing."
   },
   {
-    title: "Hello hi",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid libero saepe soluta at? Libero eaque tenetur iste enim autem! Omnis, sint totam. Nulla exercitationem veniam vero saepe optio cum illo!"
+    title: "Compliance with Government Standards",
+    description: "Our software is designed to comply with all the tax regulations and requirements set by the government. M-Tech Billing ensures that your business operates within the legal framework and avoids any potential issues."
   },
   {
-    title: "Hello hi",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid libero saepe soluta at? Libero eaque tenetur iste enim autem! Omnis, sint totam. Nulla exercitationem veniam vero saepe optio cum illo!"
-  },
+    title: "User-Friendly Interface",
+    description: "With a simple and intuitive interface, M-Tech Billing makes managing your billing and invoicing processes easy, even for those with limited technical expertise. You can get started quickly with minimal training."
+  }
 ];
+
 
 const MtechBillingHero = () => {
   const navigate = useNavigate();
@@ -42,10 +43,10 @@ const MtechBillingHero = () => {
       {/* Hero Section */}
       <section className='text-center px-6 py-16'>
         <h1 className='text-4xl md:text-5xl font-bold text-slate-700 leading-tight'>
-          Lorem Ipsum Dorem <br /> Hiojd Kiewf Bfeif
+        M-Tech Billing Software
         </h1>
         <p className='mt-6 max-w-7xl mx-auto text-lg text-slate-600'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dolorum magnam quas voluptas iure tenetur. Nostrum magnam aspernatur quis nulla numquam expedita consequatur saepe, dignissimos molestias recusandae, totam repudiandae rerum.
+        M-Tech Billing is a powerful online billing software solution, fully certified by the Inland Revenue Department (IRD) of Nepal. Designed for businesses of all sizes, M-Tech Billing streamlines your invoicing and billing processes, ensuring compliance with government regulations. With M-Tech Billing, you can generate accurate bills, manage transactions, and maintain records effortlessly, all while adhering to the standards set by the Nepal government.
         </p>
         <div className='mt-8 flex justify-center gap-4'>
           <button
@@ -90,7 +91,7 @@ const MtechBillingHero = () => {
               viewport={{ once: true }} // Trigger the animation only once when it's in view
             >
               <h3 className='text-xl mb-4 text-slate-700'>{feature.title}</h3>
-              <p className='text-sm text-slate-600 leading-relaxed'>{feature.description}</p>
+              <p className='text-md text-slate-600 leading-relaxed'>{feature.description}</p>
             </motion.div>
           ))}
         </div>
