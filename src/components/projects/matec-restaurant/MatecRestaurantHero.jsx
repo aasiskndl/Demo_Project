@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import image from '/images/dashboard.webp';
 import { ArrowRight } from "lucide-react";
 import { useNavigate } from 'react-router-dom';
+import logo from '/images/matec-restaurant-logo.jpg';
 
 // Constants on the webpage
 const features = [
@@ -35,28 +36,35 @@ const features = [
 
 const MatecRestaurantHero = () => {
   //for navigation to contactus page
-const navigate = useNavigate();
+  const navigate = useNavigate();
 
-const handleContactClick = () => {
-  navigate('/contact');
-};
+  const handleContactClick = () => {
+    navigate('/contact');
+  };
   return (
     <div className='bg-secondary'>
+      <div className="flex justify-center items-center h-16 ">
+        <img
+          src={logo}
+          alt="Matec Restaurant Logo"
+          className="w-[120px] h-[120px]  object-cover"
+        />
+      </div>
       {/* Hero Section */}
       <section className='text-center px-6 py-16'>
         <h1 className='text-4xl md:text-5xl font-bold text-slate-700 leading-tight'>
-        Matec Restaurant Software
+          Matec Restaurant Software
         </h1>
         <p className='mt-6 max-w-7xl mx-auto text-lg text-slate-600'>
-        Matec Restaurant is an integrated software solution specifically designed for the restaurant industry. It offers robust features for order management, billing, and stock control, enabling restaurant owners to streamline their operations. With Matec Restaurant, you can manage customer orders, track inventory, and generate accurate bills, all in one place. This software is essential for running a smooth and efficient restaurant business.
+          Matec Restaurant is an integrated software solution specifically designed for the restaurant industry. It offers robust features for order management, billing, and stock control, enabling restaurant owners to streamline their operations. With Matec Restaurant, you can manage customer orders, track inventory, and generate accurate bills, all in one place. This software is essential for running a smooth and efficient restaurant business.
         </p>
         <div className='mt-8 flex justify-center gap-4'>
-        <button
-          className="group inline-flex items-center px-6 py-3 bg-gray-700 hover:bg-yellow-500 text-white rounded-md transition-colors duration-300"
-          onClick={handleContactClick} >
-          Get Free Demo
-          <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-        </button>
+          <button
+            className="group inline-flex items-center px-6 py-3 bg-gray-700 hover:bg-yellow-500 text-white rounded-md transition-colors duration-300"
+            onClick={handleContactClick} >
+            Get Free Demo
+            <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+          </button>
           <button className='bg-gray-700 hover:bg-yellow-500 text-white py-2 px-6 rounded-md shadow font-semibold transition-colors duration-300 transform hover:scale-[1.02]'>
             Demo Video
           </button>
@@ -102,4 +110,4 @@ const handleContactClick = () => {
   );
 };
 
-export default MatecRestaurantHero ;
+export default MatecRestaurantHero;

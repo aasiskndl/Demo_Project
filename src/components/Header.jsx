@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { NavLink, useLocation } from "react-router-dom"
-import { ChevronDown, Home, Menu, X } from "lucide-react"
+import { ChevronDown, Menu, X } from "lucide-react"
+import image from '/images/matrika-technology.png';
 
 // Navigation data
 const companyLinks = [
@@ -9,8 +10,8 @@ const companyLinks = [
 ]
 
 const productLinks = [
-  { name: "M-Tech Billing", path: "/products/mtechbilling" },
   { name: "JJewellery", path: "/products/jjewellery" },
+  { name: "M-Tech Billing", path: "/products/mtechbilling" },
   { name: "Matec Restaurant", path: "/products/matecrestaurant" },
 ]
 
@@ -20,6 +21,7 @@ const careerLinks = [{ name: "Career", path: "/career" }]
 const cn = (...classes) => {
   return classes.filter(Boolean).join(" ")
 }
+
 
 export default function Header() {
   const location = useLocation()
@@ -44,13 +46,19 @@ export default function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-tint py-4 shadow-md rounded-b-lg">
+    <header className="sticky top-0 z-50 w-full bg-tint py-4 shadow-md">
       <div className="container mx-auto flex items-center justify-between px-4 md:px-6">
         {/* Logo */}
-        <NavLink to="/" className="text-yellow-500">
-          <Home className="h-8 w-8" />
-          <span className="sr-only">Home</span>
+        <NavLink to="/" className="relative">
+          <div className="relative h-12 w-12">
+            <img
+              src={image}
+              alt="Logo"
+              className="absolute left-0 top-0 h-12 w-12 object-cover rounded-full"
+            />
+          </div>
         </NavLink>
+
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-1">
@@ -263,7 +271,7 @@ export default function Header() {
 
             <NavLink
               to="/services"
-              onClick={() => setIsMobileMenuOpen(false)}  
+              onClick={() => setIsMobileMenuOpen(false)}
               className={({ isActive }) =>
                 cn(
                   "block w-full px-4 py-2 text-sm font-medium transition-colors",
@@ -278,7 +286,7 @@ export default function Header() {
               <NavLink
                 key={link.name}
                 to={link.path}
-                onClick={() => setIsMobileMenuOpen(false)}  
+                onClick={() => setIsMobileMenuOpen(false)}
                 className={({ isActive }) =>
                   cn(
                     "block w-full px-4 py-2 text-sm font-medium transition-colors",

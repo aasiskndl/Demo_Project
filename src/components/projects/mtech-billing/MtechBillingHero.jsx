@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import image from '/images/dashboard.webp';
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight } from "lucide-react";
+import logo from '/images/mtec-billing-logo.png';
 // Constants on the webpage
 const features = [
   {
@@ -40,13 +41,20 @@ const MtechBillingHero = () => {
   };
   return (
     <div className='bg-secondary'>
+      <div className="flex justify-center items-center h-16 ">
+        <img
+          src={logo}
+          alt="Jewellery Logo"
+          className="w-[120px] h-[120px]  object-cover"
+        />
+      </div>
       {/* Hero Section */}
       <section className='text-center px-6 py-16'>
         <h1 className='text-4xl md:text-5xl font-bold text-slate-700 leading-tight'>
-        M-Tech Billing Software
+          M-Tech Billing Software
         </h1>
         <p className='mt-6 max-w-7xl mx-auto text-lg text-slate-600'>
-        M-Tech Billing is a powerful online billing software solution, fully certified by the Inland Revenue Department (IRD) of Nepal. Designed for businesses of all sizes, M-Tech Billing streamlines your invoicing and billing processes, ensuring compliance with government regulations. With M-Tech Billing, you can generate accurate bills, manage transactions, and maintain records effortlessly, all while adhering to the standards set by the Nepal government.
+          M-Tech Billing is a powerful online billing software solution, fully certified by the Inland Revenue Department (IRD) of Nepal. Designed for businesses of all sizes, M-Tech Billing streamlines your invoicing and billing processes, ensuring compliance with government regulations. With M-Tech Billing, you can generate accurate bills, manage transactions, and maintain records effortlessly, all while adhering to the standards set by the Nepal government.
         </p>
         <div className='mt-8 flex justify-center gap-4'>
           <button

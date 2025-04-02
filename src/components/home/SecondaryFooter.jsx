@@ -32,23 +32,24 @@ const contactDetails = [
 const SecondaryFooter = () => {
   return (
     <section
-      className='px-4 md:px-10 lg:px-20 py-16 rounded-t-xl border-green-200 border-b-2 text-center text-gray-300 bg-slate-800'
+      className="w-[90%] mx-auto px-4 md:px-10 lg:px-20 py-16  text-center text-gray-300 bg-slate-800 relative -mb-10"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {contactDetails.map((item, index) => (
-          <div
-            key={index}
-            className='flex flex-col items-center space-y-2'
-          >
+          <div key={index} className="flex flex-col items-center space-y-2">
             {item.icon}
-            <h3 className='font-bold text-lg'>{item.title}</h3>
-            <p className='text-sm'>{item.phone}</p>
-            <p className='text-sm'>{item.email}</p>
+            <h3 className="font-bold text-lg">{item.title}</h3>
+            <p className="text-sm">{item.phone}</p>
+            <p className="text-sm">{item.email}</p>
           </div>
         ))}
       </div>
     </section>
-  )
+  );
+  
 }
 
 export default SecondaryFooter
+
+
+

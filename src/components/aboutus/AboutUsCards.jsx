@@ -19,7 +19,7 @@ const content = [
 
 const AboutUsCards = () => {
   return (
-    <div className="bg-secondary py-8 px-4 sm:px-8 lg:px-18 space-y-20">
+    <div className="bg-secondary py-8 px-4 sm:px-8 lg:px-16 space-y-20">
       {content.map(({ title, image, description, reverse }, index) => (
         <div
           key={index}
@@ -48,6 +48,7 @@ const AboutUsCards = () => {
         </div>
       ))}
     </div>
+
   );
 };
 
