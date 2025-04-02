@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { ArrowRight } from "lucide-react";
 import { useNavigate } from 'react-router-dom';
 
@@ -8,10 +8,9 @@ const Banner = () => {
   const handleContactClick = () => {
     navigate('/contact');
   };
-  const [showModal, setShowModal] = useState(false);
 
   return (
-    <section className="bg-secondary relative py-16 md:py-28 px-4 sm:px-6 lg:px-16 overflow-hidden -mt-6">
+    <section className="bg-secondary relative py-16 md:py-28 px-4 sm:px-6 lg:px-16 overflow-hidden -mt-6 mb-4">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* Left Text Section */}

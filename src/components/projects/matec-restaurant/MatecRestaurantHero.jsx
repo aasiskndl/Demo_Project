@@ -47,7 +47,7 @@ const MatecRestaurantHero = () => {
         <img
           src={logo}
           alt="Matec Restaurant Logo"
-          className="w-[120px] h-[120px]  object-cover"
+          className="w-[30%] max-w-32 h-auto object-cover"
         />
       </div>
       {/* Hero Section */}
@@ -89,7 +89,7 @@ const MatecRestaurantHero = () => {
           {features.map((feature, index) => (
             <motion.div
               key={index}
-              className='bg-answer p-6 rounded-lg shadow hover-shadow-lg transition-shadow duration-300'
+              className='bg-answer p-6 rounded-md shadow-md hover:shadow-xl transition-shadow duration-300'
               initial={{ opacity: 0, y: 100 }} // Comes from the bottom
               whileInView={{ opacity: 1, y: 0 }} // Moves to original position
               transition={{

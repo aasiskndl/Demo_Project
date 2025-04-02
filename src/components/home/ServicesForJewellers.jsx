@@ -26,46 +26,37 @@ const service = [
     image: "/images/app-dev.svg",
   },
 ];
-
 const ServicesForJewellers = () => {
   return (
-    <section className="px-4 md:px-10 lg:px-20 py-11 bg-secondary space-y-20">
-      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-700 justify-center text-center">
-        Our Services For Jeweller's
+    <section className="px-4 md:px-10 lg:px-20 py-11 bg-secondary space-y-12 md:space-y-16">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-700 text-center">
+        Our Services For Jewellers
       </h1>
       {service.map((service, index) => (
         <div
           key={index}
-          className="flex flex-col md:flex-row items-center gap-10"
+          className="flex flex-col md:flex-row items-center gap-12 lg:gap-16 pb-12 md:pb-16 border-b border-gray-300 last:border-none"
         >
           {/* Text Section */}
           <div
-            className={`
-              w-full md:w-1/2 
-              order-1 
-              ${index % 2 !== 0 ? "md:order-2" : "md:order-1"} 
-              text-center md:text-left
-            `}
+            className={`w-full md:w-1/2 text-center md:text-left 
+              ${index % 2 !== 0 ? "md:order-2" : "md:order-1"}`}
           >
-            <h2 className="text-3xl font-bold text-slate-700 mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-700 mb-3 sm:mb-4">
               {service.title}
             </h2>
-            <p className="text-slate-600 mb-4 text-lg ">{service.description}</p>
-            
+            <p className="text-base sm:text-lg text-slate-600">{service.description}</p>
           </div>
 
           {/* Image Section */}
           <div
-            className={`
-              w-full md:w-1/2 
-              order-2 
-              ${index % 2 !== 0 ? "md:order-1" : "md:order-2"}
-            `}
+            className={`w-full md:w-1/2 flex justify-center 
+              ${index % 2 !== 0 ? "md:order-1" : "md:order-2"}`}
           >
             <img
               src={service.image}
               alt={service.title}
-              className="w-full h-auto max-w-[500px] mx-auto shadow-sm rounded-lg"
+              className="w-full max-w-[350px] sm:max-w-[400px] md:max-w-[450px] h-auto mx-auto shadow-sm rounded-lg"
             />
           </div>
         </div>
