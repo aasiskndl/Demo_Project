@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from "lucide-react";
-import image from '/images/dashboard.webp';
+import image from '/images/jje.png';
 import { useNavigate } from 'react-router-dom';
 import video from '/videos/jjewellery.mp4';
 import logo from '/images/jjewellery-logo.png';
@@ -83,12 +83,12 @@ const JJewelleryHero = () => {
       </section>
 
       {/* Dashboard Preview */}
-      <section className='flex justify-center px-4 sm:px-8 md:px-12 py-10'>
-        <div className="relative w-full max-w-7xl">
+      <section className='flex justify-center px-0.5 sm:px-0.5 md:px-4 lg:py-10 sm:py-1'>
+        <div className="relative w-full max-w-7xl ">
           <img
             src={image}
             alt="JJewellery Software Dashboard Preview"
-            className='w-full rounded-lg shadow-xl object-cover'
+            className='w-full rounded-md shadow-md object-cover'
           />
         </div>
       </section>
