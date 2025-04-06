@@ -5,21 +5,21 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const testimonials = [
   {
     id: 1,
-    name: "Hari Baral",
+    name: "Annapurna Jewellery Pvt. Ltd",
     image: "/images/profile.svg",
-    text: "The inventory management system has been a game-changer for us. We no longer worry about stock shortages, and the real-time gold rate updates are incredibly useful. Thank you, Matrika Technology, for providing such a reliable solution!",
+    text: "Thanks to Matrika Technology, inventory tracking is no longer a hassle. The software gives us real-time updates and keeps everything organized, from stock levels to product details. It’s efficient, reliable, and tailor-made for jewelry businesses.",
   },
   {
     id: 2,
-    name: "Sara Dahal",
+    name: "Radha Krishna Jewellers Pvt. Ltd",
     image: "/images/profile.svg",
     text: "Matrika Technology has completely transformed the way we manage our business. The order management and billing features are easy to use and have helped us streamline our operations. Highly recommended for any jewelry business!",
   },
   {
     id: 3,
-    name: "Ankit Sharma",
+    name: "Pakshala Restaurant & Grill",
     image: "/images/profile.svg",
-    text: "The custom software developed for our business is tailored perfectly to our needs. The loan and finance management system has made our work so much easier and more efficient. We’ve seen a significant improvement in our day-to-day operations.",
+    text: "Matrika Technology has simplified our restaurant’s billing and table management like never before. From quick order processing to detailed sales reports, everything runs smoothly. It’s the perfect tool for busy restaurants looking to upgrade their operations!",
   },
   {
     id: 4,

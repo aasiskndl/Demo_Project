@@ -1,9 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import image from '/images/dashboard.webp';
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight } from "lucide-react";
 import logo from '/images/mtec-billing-logo.png';
+import pcimage from '/images/pcmtech-billing.png';
+import laptopStyles from "../module_css/Laptop.module.css";
+
 // Constants on the webpage
 const features = [
   {
@@ -71,12 +73,19 @@ const MtechBillingHero = () => {
 
       {/* Image Section */}
       <section className='flex justify-center px-4 sm:px-8 md:px-12 py-10'>
-        <div className="relative w-full max-w-7xl">
+        {/* <div className="relative w-full max-w-7xl">
           <img
             src={image}
             alt="Image"
             className='w-full rounded-lg shadow-xl object-cover'
           />
+        </div> */}
+
+        <div className={`${laptopStyles.laptop} scale-110`}>
+          <div className={laptopStyles.laptop__screen}>
+            <img src={pcimage} alt="Laptop Screen" width="1800" height="1600" />
+          </div>
+          <div className={laptopStyles.laptop__base}></div>
         </div>
       </section>
 

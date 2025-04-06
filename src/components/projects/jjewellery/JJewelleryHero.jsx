@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from "lucide-react";
-import image from '/images/jje.png';
+import pcimage from '/images/jje.png';
+import mobileimage from '/images/mobilejje.jpg'
 import { useNavigate } from 'react-router-dom';
 import video from '/videos/jjewellery.mp4';
 import logo from '/images/jjewellery-logo.png';
+import laptopStyles from "../module_css/Laptop.module.css";
+import mobileStyles from "../module_css/Mobile.module.css";
 
 const features = [
   {
@@ -84,12 +87,27 @@ const JJewelleryHero = () => {
 
       {/* Dashboard Preview */}
       <section className='flex justify-center px-0.5 sm:px-0.5 md:px-4 lg:py-10 sm:py-1'>
-        <div className="relative w-full max-w-7xl ">
+        {/* <div className="relative w-full max-w-7xl ">
           <img
             src={image}
             alt="JJewellery Software Dashboard Preview"
             className='w-full rounded-md shadow-md object-cover'
           />
+        </div> */}
+        <div className="flex gap-40  items-end">
+          <div className={`${laptopStyles.laptop} scale-110`}>
+            <div className={laptopStyles.laptop__screen}>
+              <img src={pcimage} alt="Laptop Screen" width="1800" height="1600" />
+            </div>
+            <div className={laptopStyles.laptop__base}></div>
+          </div>
+
+          <div className={mobileStyles.mobile}>
+            <div className={mobileStyles.mobile__camera}></div>
+            <div className={mobileStyles.mobile__screen}>
+              <img src={mobileimage} alt="Mobile Screen" />
+            </div>
+          </div>
         </div>
       </section>
 
