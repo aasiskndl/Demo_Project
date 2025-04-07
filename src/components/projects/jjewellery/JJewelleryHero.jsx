@@ -87,14 +87,7 @@ const JJewelleryHero = () => {
 
       {/* Dashboard Preview */}
       <section className='flex justify-center px-0.5 sm:px-0.5 md:px-4 lg:py-10 sm:py-1'>
-        {/* <div className="relative w-full max-w-7xl ">
-          <img
-            src={image}
-            alt="JJewellery Software Dashboard Preview"
-            className='w-full rounded-md shadow-md object-cover'
-          />
-        </div> */}
-        <div className="flex gap-40  items-end">
+        <div className="flex flex-col md:flex-row ipad:flex-col gap-10 md:gap-40 items-center md:items-end">
           <div className={`${laptopStyles.laptop} scale-110`}>
             <div className={laptopStyles.laptop__screen}>
               <img src={pcimage} alt="Laptop Screen" width="1800" height="1600" />
@@ -110,6 +103,8 @@ const JJewelleryHero = () => {
           </div>
         </div>
       </section>
+
+
 
       {/* Features Grid */}
       <section className='bg-secondary py-16 px-6 flex flex-col'>

@@ -1,6 +1,7 @@
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 
+
 const contactInfo = [
   { icon: <FaPhoneAlt />, text: "01-5925122", link: "tel:01-5925122" },
   { icon: <FaEnvelope />, text: "info@matrikatec.com.np", link: "mailto:info@matrikatec.com.np" },
@@ -22,9 +23,8 @@ const quickLinks = [
 
 const Footer = () => {
   return (
-    <div className="bg-tint w-full py-8 md:py-10 text-white px-4 sm:px-6 lg:px-8 mt-2">
+    <div className=" bg-tint w-full py-8 md:py-10 text-white px-4 sm:px-6 lg:px-8 mt-2">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16 text-base">
-
         {/* Contact Section */}
         <div className="flex flex-col items-start space-y-4">
           <h2 className="text-lg md:text-xl font-semibold mb-4 text-yellow-500">Contact</h2>

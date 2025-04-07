@@ -73,17 +73,9 @@ const MatecRestaurantHero = () => {
         </div>
       </section>
 
-      {/* Image Section */}
-      <section className='flex justify-center px-4 sm:px-8 md:px-12 py-10'>
-        {/* <div className="relative w-full max-w-7xl">
-          <img
-            src={image}
-            alt="Image"
-            className='w-full rounded-lg shadow-xl object-cover'
-          />
-        </div> */}
-
-        <div className="flex gap-40  items-end">
+      {/* Dashboard Preview */}
+      <section className='flex justify-center px-0.5 sm:px-0.5 md:px-4 lg:py-10 sm:py-1'>
+        <div className="flex flex-col md:flex-row ipad:flex-col gap-10 md:gap-40 items-center md:items-end">
           <div className={`${laptopStyles.laptop} scale-110`}>
             <div className={laptopStyles.laptop__screen}>
               <img src={pcimage} alt="Laptop Screen" width="1800" height="1600" />
