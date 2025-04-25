@@ -6,7 +6,7 @@ const LocationMap = () => {
         className="w-full h-[400px] md:h-[500px] lg:h-[600px]"
         style={{ border: 0 }}
         allowFullScreen
-        loading="lazy"
+        loading="eager"
         referrerPolicy="no-referrer-when-downgrade"
         title="Matrika Technology Location"
       ></iframe>

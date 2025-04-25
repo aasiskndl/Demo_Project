@@ -16,7 +16,7 @@ const Banner = () => {
           {/* Left Text Section */}
           <div className="flex-1 space-y-6 text-center md:text-left">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-700 leading-tight">
-              Matrika Technology <br /> For Jeweller's
+              Matrika Technology<br />For Jeweller's
             </h1>
             <p className="text-base sm:text-lg text-slate-600">
               Powerful, Easy-to-Use Software for Seamless Jewellery Business Management – From Billing to Stock Control, Everything at Your Fingertips!
